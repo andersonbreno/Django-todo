@@ -1,13 +1,42 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <h1>Lista de Tarefas</h1>
+{% extends 'base.html' %}
 
-</body>
-</html>
+{% block title %}Lista de Tarefas{% endblock title %}
+
+{% block content %}
+<div class="offset-1 col-10 list-div">
+    <h1>Lista de Tarefas</h1>
+    <div class="col-2 add-div">
+        <i class="fas fa-plus"></i> Adicionar tarefa
+    </div> 
+    <div class="col-9 search-div">
+        <input type="text" id="search" name="search" placeholder="Digite o nome da tarefa para buscar">
+        <i class="fas fa-search"></i>
+    </div>  
+    <ul class="task-list"></ul> 
+        <li class="task-item">
+            <span>Título da tarefa</span>
+            <span><i class="fas fa-trash"></i></span>
+            <span><i class="fas fa-edit"></i></span>
+        </li>
+        <li class="task-item">
+            <span>Título da tarefa</span>
+            <span><i class="fas fa-trash"></i></span>
+            <span><i class="fas fa-edit"></i></span>
+        </li>
+        <li class="task-item">
+            <span>Título da tarefa</span>
+            <span><i class="fas fa-trash"></i></span>
+            <span><i class="fas fa-edit"></i></span>
+        </li>
+        <li class="task-item">
+            <span>Título da tarefa</span>
+            <span><i class="fas fa-trash"></i></span>
+            <span><i class="fas fa-edit"></i></span>
+        </li>
+        <li class="task-item">
+            <span>Título da tarefa</span>
+            <span><i class="fas fa-trash"></i></span>
+            <span><i class="fas fa-edit"></i></span>
+        </li>
+</div>
+{% endblock content %}
