@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
 from django.http import HttpResponse
 
 from .models import Task
@@ -7,7 +7,9 @@ def taskList(request):
     tasks = Task.objects.all()
     return render(request, 'tasks/list.html', {'tasks': tasks})
 
-
+def taskView(request, id):
+    task = get_object_or_404(Task, pk=id)
+    return render(request, 'tasks/task.html', {'task': task})
 def helloWorld(request):
     return HttpResponse('Aqui pode ser retornado uma reposta http, como também um template html com todas suas informações.')
 
